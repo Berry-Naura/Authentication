@@ -17,6 +17,38 @@
      border-radius: 12px;
      background-color: #e0c3fc;
  }
+#authdetails{
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    font-weight: 700;
+}
+#authdetails button{
+    margin: 30px;
+    width: 400px;
+    height: 50px;
+}
+ #blog{
+    display: flex;
+    flex-direction: column;
+    height:auto;
+ }
+ #blog .heading{
+    font-size: xx-large;
+    font-weight: 700;
+ }
+ #blog input, .display{
+    display: flex;
+    margin:30px; 
+    font-weight: 400;
+ }
+ #blog input:hover{
+    font-size: larger;
+ }
+ #blog button, h1{
+    margin-left: 20px;
+    margin-right: 20px;
+ }
  form{
     display: flex;
     flex-direction: column;

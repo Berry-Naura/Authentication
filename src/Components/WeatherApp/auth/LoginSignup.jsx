@@ -45,6 +45,8 @@ const LoginSignup = () => {
             <div className="button">
                 <Link ><button type="submit" onClick={signIn}>LogIn</button></Link>
                 <Link to='/SignUp'><button>SignUp</button></Link>
+                <button id="google-login-btn" class="google button">
+                    Login with Google</button>
             </div>
         </form>
     </div>

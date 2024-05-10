@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
-import "./Blog.css";
 import {db} from '../../../firebase-config'
 import { collection, getDocs, addDoc, updateDoc, deleteDoc,  doc, } from "firebase/firestore";
+import '../auth/loginsignup.css'
 
 function Blog() {
     const [newName, setNewName] = useState("")
@@ -35,7 +35,9 @@ function Blog() {
         getUsers()
     }, [])
     return ( 
-    <div className="Blog">
+    <div  id= "blog" className="container2">
+        <div class="heading">Record Your Visit to App</div>
+        <div class="input">
         <input 
             placeholder="Name..." 
             onChange={(event) => {setNewName(event.target.value)
@@ -47,10 +49,10 @@ function Blog() {
             onChange={(event) => {setNewAge(event.target.value)}}
         />
 
-        <button onClick={createUser}>Create User</button>
+        <button onClick={createUser}>Create User</button></div>
         {users.map((user) => {
         return (
-        <div>
+        <div class="display">
             {" "}
             <h1> Name: {user.name}</h1>
             <h1>Age: {user.age}</h1>

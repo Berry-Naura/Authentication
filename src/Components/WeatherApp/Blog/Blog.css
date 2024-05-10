@@ -1,4 +1,12 @@
 *{
     display:flex;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.Blog{
+    display:flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
