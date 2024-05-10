@@ -13,14 +13,14 @@ const WeatherApp= () => {
 
     const search = async () => {
         const element = document.getElementsByClassName("cityInput");
-        if(element[0].value==""){
+        if(element[0].value===""){
             return 0;
         }
-        let url= `https://api.openweathermap.org/data/3.0/weather?q=${element[0].value}&units=Metric&appid=${api_key}`;
+        let url= `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&appid=${api_key}`;
 
         let response = await fetch(url);
         let data = await response.json();
-        console.log(data) ;
+        console.log("fetched data",data);
         const humidity = document.getElementsByClassName("humidity-percent")
         const wind = document.getElementsByClassName("wind-rate")
         const temperature = document.getElementsByClassName("weather-temp")

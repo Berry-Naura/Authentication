@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth } from "../../../firebase-config";
 import './loginsignup.css'
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 import email_icon from '../../Assets2/email.png'
@@ -13,11 +13,16 @@ const LoginSignup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const navigate = useNavigate();
+
+
     const signIn = (e)=>{
         e.preventDefault();
+        console.log('hello');
         signInWithEmailAndPassword(auth, email, password)
             .then ((userCredential) => {
                 console.log(userCredential);
+                navigate('/WeatherApp')
             }).catch((error) => {
             console.log(error)
         })
@@ -38,7 +43,7 @@ const LoginSignup = () => {
                         onChange={(e) => setPassword(e.target.value)}></input>
             </div>
             <div className="button">
-                <Link to='/WeatherApp'><button type="submit">LogIn</button></Link>
+                <Link ><button type="submit" onClick={signIn}>LogIn</button></Link>
                 <Link to='/SignUp'><button>SignIn</button></Link>
             </div>
         </form>
