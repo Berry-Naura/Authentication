@@ -44,7 +44,7 @@ const LoginSignup = () => {
             </div>
             <div className="button">
                 <Link ><button type="submit" onClick={signIn}>LogIn</button></Link>
-                <Link to='/SignUp'><button>SignIn</button></Link>
+                <Link to='/SignUp'><button>SignUp</button></Link>
             </div>
         </form>
     </div>

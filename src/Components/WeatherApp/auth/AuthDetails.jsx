@@ -27,10 +27,11 @@ const AuthDetails = () => {
         }).catch(error => console.log(error))
     }
   return (
-    <div className="container 2">{authUser ? <><p>{`Signed In as ${authUser.email}`}</p><button onClick={userSignOut}>Sign Out</button></> : 
-    <div><p>Signed Out</p>
-    <Link to='/Blog'><button>View Blog</button></Link>
-    <Link to='/WeatherApp'><button>Search Weather</button></Link></div>}</div>
+    <div className="container 2">
+        {authUser ? <><p>{`Signed In as ${authUser.email}`}</p><button onClick={userSignOut}>Sign Out</button></> : <p>Signed Out</p>}
+        <Link to='/WeatherApp'><button>View Weather</button></Link>
+        <Link to='/Blog'><button>Chat In Blog</button></Link>
+    </div>
     )
 }
 
